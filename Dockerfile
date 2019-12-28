@@ -12,4 +12,6 @@ COPY install.sh /install.sh
 RUN chmod +x /install.sh && /install.sh
 
 # Override entrypoint script
-COPY docker-entrypoint.sh /docker-entrypoint.sh
+COPY docker-entrypoint.sh /tmp/docker-entrypoint.sh
+
+WORKDIR /tmp
